@@ -4,8 +4,8 @@ from pathlib import Path
 import random
 import string
 
-Output_path = r"C:\Users\MasaH\PycharmProjects\Hello_Python\practice\product\Tool\FileSoft_Manager\Ouput_folder"
-Search_path = r"C:\Users\MasaH\PycharmProjects\Hello_Python\practice\product\Tool\FileSoft_Manager\Search_folder"
+Output_path = r"OUTPUT_PATH"
+Search_path = r"SEARCH_PATH"
 num_of_file = 25
 num_of_folder = 5
 
