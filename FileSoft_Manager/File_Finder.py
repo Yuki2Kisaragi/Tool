@@ -37,10 +37,17 @@ def file_read(*folder_list):
     return read_data
 
 
-a = file_finder(Search_path)
-pprint(a)
-b = file_read(*a)
-pprint(b)
-
 # TO DO  一つのテキストファイルとして出力する
+def file_list_generator(**dictionary):
+    os.chdir(Output_path)
+    with open("soft_list.txt", "w") as f:
+        for k, i in dictionary.items():
+            temp = str(i).replace("/* ", "")
+            temp = temp.replace(" */", "")
+            f.write("{}  : {}\n".format(k, temp))
+    f.close()
 
+
+file_list = file_finder(Search_path)
+file_dict = file_read(*file_list)
+file_list_generator(**file_dict)
